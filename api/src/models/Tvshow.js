@@ -21,7 +21,12 @@ module.exports = (sequelize) => {
     },
     description: {
       type: DataTypes.TEXT
-    }
-    
+    },
+    numberOfEpisodes: {
+      type: DataTypes.INTEGER,
+    },
+    numberOfSeasons: {
+      type: DataTypes.INTEGER,
+    },
   });
 };
