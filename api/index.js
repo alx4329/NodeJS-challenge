@@ -23,18 +23,23 @@ const moviesLoader = require('./src/functions/loadMovies.jsx')
 const actorsLoader = require('./src/functions/loadActors.jsx')
 const directorsLoader = require('./src/functions/loadDirectors.jsx')
 const setActors = require('./src/functions/setActors.js')
+const loadTvShows = require('./src/functions/loadTvShows.jsx')
+const loadEpisodes = require('./src/functions/loadEpisodes.jsx')
+const setDirectors = require('./src/functions/setDirectors.js')
 
 
 
 conn.sync({ force: true }).then(async() => {
   const m=await moviesLoader()
+  const e = await loadEpisodes()
+  const T=await loadTvShows()
   const l=await actorsLoader()
   //const d=await directorsLoader()
   
   directorsLoader().then(async(c)=>{
     
     const set = await setActors()
-
+    const set2 = await setDirectors()
   })
   
   server.listen(3001, () => {

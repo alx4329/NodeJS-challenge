@@ -14,6 +14,10 @@ module.exports = (sequelize) => {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+    episodeNumber: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
     
     description: {
       type: DataTypes.TEXT,

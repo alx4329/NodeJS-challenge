@@ -8,13 +8,8 @@ const movies = require('../../mockdata/movies')
 
 
 async function loadMovies(){
-    // let directorId = 0;
-    // let actorId = 0;
+  
     let res=movies.map(async(m)=>{
-    
-        // directorId++
-        
-    
     const newMovie = await Movie.create({
         name: m.name,
         released_date: m.released_date,
@@ -28,11 +23,6 @@ async function loadMovies(){
 
     })
     return res
-    // Promise.all(promises).then((p)=>{
-        
-    // })
-    
-    
 
 }
 
