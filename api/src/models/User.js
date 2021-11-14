@@ -20,8 +20,17 @@ module.exports = (sequelize) => {
 		password: {
 			type: DataTypes.STRING,
 			allowNull: false,
+		},
+		refreshToken: {
+			type: DataTypes.STRING,
+			allowNull: true,
+		},
+		id:{
+			type: DataTypes.INTEGER,
+			primaryKey:true,
+			autoIncrement: true,
+			
 		}
-		
 		
 
 	})

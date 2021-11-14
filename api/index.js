@@ -26,10 +26,12 @@ const setActors = require('./src/functions/setActors.js')
 const loadTvShows = require('./src/functions/loadTvShows.jsx')
 const loadEpisodes = require('./src/functions/loadEpisodes.jsx')
 const setDirectors = require('./src/functions/setDirectors.js')
+const loadUsers = require('./src/functions/loadUsers.jsx')
 
 
 
 conn.sync({ force: true }).then(async() => {
+  const u=await loadUsers()
   const m=await moviesLoader()
   const e = await loadEpisodes()
   const T=await loadTvShows()
