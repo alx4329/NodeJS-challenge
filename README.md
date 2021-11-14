@@ -2,6 +2,15 @@
 
 ## Descripción
 
+
+```bash
+Its made using  Express and a DataBase called movies on PostgreSQL.
+Download and run npm install.
+
+Loaders has been added to test the endpoints. They run with npm start before launching the server
+
+```
+
 The API has the next enpoints:
 
 * Endpoints for authentication using JWT.
@@ -61,8 +70,3 @@ description
 
 
 
-```bash
-  loaders added to test the endpoints =)
-
-  Made by Alexis Martinez
-```
